@@ -1,7 +1,9 @@
 <template>
     <default-field :field="field">
         <template slot="field">
-            <span class="inline-block pt-2 leading-tight">{{ field.value }}</span>
+            <span class="form-control form-plain-text text-80">
+                {{ field.value }}
+            </span>
         </template>
     </default-field>
 </template>
@@ -10,8 +12,6 @@
 import { FormField } from 'laravel-nova';
 
 export default {
-    mixins: [FormField],
-
-    props: ['field'],
+  mixins: [FormField]
 };
 </script>
